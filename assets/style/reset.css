@@ -1,5 +1,5 @@
 /*css reset start*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 html,
 body,
 div,
@@ -76,8 +76,18 @@ video {
   font-size: 16px;
   vertical-align: baseline;
   background: transparent;
-  font-family: 'Noto Sans JP';
+  font-family: "Noto Sans JP";
   color: #404040;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Noto Sans JP";
 }
 
 body {
@@ -121,6 +131,7 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
 }
 
 /* change colours to suit your needs */
