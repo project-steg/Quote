@@ -1,59 +1,57 @@
 <template>
-  <div class="quote-wrapper">
+  <div class="main-wrapper">
     <div class="container">
-      <div class="contents" v-for="elem in list" :key="elem.id">
-        <contents :list="elem" />
+      <div class="main-title">
+        <p>Stegホームページ制作見積もりシステム</p>
       </div>
-
-      <div class="quote-result" @vision="resultData">{{checkedName}}</div>
-      <nuxt-link to="/result" class="quote-button">
-        <button>見積もる</button>
+      <div class="main-description">
+        <p>Stegのホームページ制作見積もりシステムです。Stegに所属している学生エンジニアが制作を担当するため、他社に比べて制作費用を節約することができます。いただいたお仕事を、学生はポートフォリオや実績にすることができるため、お仕事をいただければとてもありがたいです。</p>
+      </div>
+      <div class="how-2-use">
+        <p>使い方</p>
+      </div>
+      <nuxt-link to="/quote" class="quote-button">
+        <button>見積もってみる！</button>
       </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
-import contents from "@/components/contents.vue";
-export default {
-  data() {
-    return {
-      checkedName: "",
-      list: [
-        { id: 1, name: "企業理念ページ" },
-        { id: 2, name: "お問い合わせ" },
-        { id: 3, name: "企業紹介" },
-        { id: 4, name: "オフィス地図" },
-        { id: 5, name: "代表者挨拶" },
-      ],
-    };
-  },
-  methods: {
-    resultData(checkedName) {
-      this.checkedName = checkedName;
-    },
-  },
-
-  components: {
-    contents,
-  },
-};
+export default {};
 </script>
 
-<style>
-.quote-wrapper {
-  display: grid;
-  place-items: center;
-}
-.container {
+<style scoped>
+.main-wrapper {
   width: 100%;
   display: grid;
   place-items: center;
 }
-.contents {
-  width: 80%;
-  height: 75px;
+.container {
+  width: 90%;
+  margin-top: 80px;
+  display: grid;
+  place-items: center;
+}
+.main-title p {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.main-description {
+  width: 60%;
+  border: #707070 4px solid;
   margin-top: 50px;
+  padding: 5vw;
+}
+.main-description p {
+  font-size: 1.2rem;
+}
+.how-2-use {
+  margin-top: 50px;
+}
+.how-2-use p {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .quote-button {
   display: grid;
