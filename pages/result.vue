@@ -1,3 +1,5 @@
 <template>
-  <div>あんざいさんが全部つくるらしい</div>
+<div class="result-wrapper">
+  <div class="resulut-container"></div>
+</div>
 </template>

@@ -29,7 +29,7 @@ export default {};
 }
 .container {
   width: 90%;
-  margin-top: 80px;
+  margin-top: 40px;
   display: grid;
   place-items: center;
 }
@@ -57,7 +57,7 @@ export default {};
   display: grid;
   place-items: center;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 button {
   width: 60%;

@@ -54,13 +54,13 @@ export default {
 .contents {
   width: 80%;
   height: 75px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .quote-button {
   display: grid;
   place-items: center;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 button {
   width: 60%;
