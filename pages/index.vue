@@ -1,73 +1,82 @@
 <template>
-  <div class="main-wrapper">
-    <div class="container">
-      <div class="main-title">
-        <p>Stegホームページ制作見積もりシステム</p>
-      </div>
-      <div class="main-description">
-        <p>Stegのホームページ制作見積もりシステムです。Stegに所属している学生エンジニアが制作を担当するため、他社に比べて制作費用を節約することができます。いただいたお仕事を、学生はポートフォリオや実績にすることができるため、お仕事をいただければとてもありがたいです。</p>
-      </div>
-      <div class="how-2-use">
-        <p>使い方</p>
-      </div>
-      <nuxt-link to="/quote" class="quote-button">
-        <button>見積もってみる！</button>
-      </nuxt-link>
-    </div>
-  </div>
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <v-list dense>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-email</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Contact</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar
+      app
+      color="indigo"
+      dark
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>Application</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <v-container
+        class="fill-height"
+        fluid
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col class="text-center">
+            <v-tooltip left>
+              <template v-slot:activator="{ on }">
+                <v-btn
+                  :href="source"
+                  icon
+                  large
+                  target="_blank"
+                  v-on="on"
+                >
+                  <v-icon large>mdi-code-tags</v-icon>
+                </v-btn>
+              </template>
+              <span>Source</span>
+            </v-tooltip>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+    <v-footer
+      color="indigo"
+      app
+    >
+      <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-export default {};
+  export default {
+    props: {
+      source: String,
+    },
+    data: () => ({
+      drawer: null,
+    }),
+  }
 </script>
-
-<style scoped>
-.main-wrapper {
-  width: 100%;
-  display: grid;
-  place-items: center;
-}
-.container {
-  width: 90%;
-  margin-top: 40px;
-  display: grid;
-  place-items: center;
-}
-.main-title p {
-  font-weight: 700;
-  font-size: 2rem;
-}
-.main-description {
-  width: 60%;
-  border: #707070 4px solid;
-  margin-top: 50px;
-  padding: 5vw;
-}
-.main-description p {
-  font-size: 1.2rem;
-}
-.how-2-use {
-  margin-top: 50px;
-}
-.how-2-use p {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.quote-button {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  margin-top: 50px;
-}
-button {
-  width: 60%;
-  height: 50px;
-  background-color: #cccccc;
-  filter: drop-shadow(4px 4px 6px #707070);
-  position: relative;
-}
-button:active {
-  filter: drop-shadow(0px 0px 0px);
-  top: 3px;
-}
-</style>
