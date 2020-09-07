@@ -6,9 +6,7 @@
       </div>
 
       <div class="quote-result" @vision="resultData">{{checkedName}}</div>
-      <nuxt-link to="/result" class="quote-button">
-        <button>見積もる</button>
-      </nuxt-link>
+        <button @click="$store.commit('viewPage', 3)">見積もる</button>
     </div>
   </div>
 </template>

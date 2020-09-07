@@ -5,7 +5,7 @@
       app
     >
       <v-list dense>
-        <v-list-item link>
+        <v-list-item link @click="$store.commit('viewPage', 0)">
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -13,7 +13,7 @@
             <v-list-item-title>ホーム</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="$store.commit('viewPage', 1)">
           <v-list-item-action>
             <v-icon>mdi-align-horizontal-left</v-icon>
           </v-list-item-action>
@@ -21,7 +21,7 @@
             <v-list-item-title>見積もる</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="$store.commit('viewPage', 2)">
           <v-list-item-action>
             <v-icon>mdi-email</v-icon>
           </v-list-item-action>
@@ -55,20 +55,9 @@
           justify="center"
         >
           <v-col class="text-center">
-            <v-tooltip left>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  :href="source"
-                  icon
-                  large
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-code-tags</v-icon>
-                </v-btn>
-              </template>
-              <span>Source</span>
-            </v-tooltip>
+            <top v-if="$store.state.viewPage === 0" />
+            <quote v-if="$store.state.viewPage === 1" />
+            <result v-if="$store.state.viewPage === 3" />
           </v-col>
         </v-row>
       </v-container>
@@ -84,6 +73,8 @@
 
 <script>
 import quote from "@/components/quote.vue";
+import top from "@/components/top.vue";
+import result from "@/components/result.vue";
   export default {
     props: {
       source: String,
@@ -92,7 +83,9 @@ import quote from "@/components/quote.vue";
       drawer: null,
     }),
     components: {
-    contents,
+      quote,
+      top,
+      result
   },
   }
 </script>
