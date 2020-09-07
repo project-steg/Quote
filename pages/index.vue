@@ -34,14 +34,14 @@
 
     <v-app-bar
       app
-      color="indigo"
+      color="#20d8ba"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>
-        <div class="title-color">
-          Stegホームページ作成見積もりシステム
-        </div>
+          <div class="title-color">
+            Stegホームページ作成見積もりシステム
+          </div>
       </v-toolbar-title>
     </v-app-bar>
 
@@ -63,7 +63,7 @@
       </v-container>
     </v-main>
     <v-footer
-      color="indigo"
+      color="#20d8ba"
       app
     >
       <span class="white--text">&copy; {{ new Date().getFullYear() }} Steg All Rights Reserved.</span>
@@ -93,4 +93,5 @@ import result from "@/components/result.vue";
 .title-color {
   color: #ffffff;
 }
+
 </style>>
