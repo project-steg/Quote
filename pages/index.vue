@@ -30,7 +30,11 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>
+        <div class="title-color">
+          Stegホームページ作成見積もりシステム
+        </div>
+      </v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -80,3 +84,8 @@
     }),
   }
 </script>
+<style scoped>
+.title-color {
+  color: #ffffff;
+}
+</style>>
