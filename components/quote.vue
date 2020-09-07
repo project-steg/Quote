@@ -15,6 +15,7 @@
 
 <script>
 import contents from "@/components/contents.vue";
+import result from "@/components/result.vue";
 export default {
   data() {
     return {
@@ -36,6 +37,7 @@ export default {
 
   components: {
     contents,
+    result
   },
 };
 </script>
