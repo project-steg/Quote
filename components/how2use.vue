@@ -4,9 +4,44 @@
       <p>使い方</p>
     </div>
     <div class="how2use-contents">
-      <div class="how2use-contents-l"></div>
-      <div class="how2use-contents-c"></div>
-      <div class="how2use-contents-r"></div>
+      <div class="how2use-contents-l">
+        <div class="empty-stick"></div>
+        <div class="circle">
+          <v-icon m-large dark>mdi-align-horizontal-left</v-icon>
+        </div>
+        <div class="stick"></div>
+      </div>
+      <div class="how2use-contents-c">
+        <div class="how2use-step">Step1</div>
+        <div class="how2use-title">見積もり</div>
+        <div class="how2use-subtitle">Quote</div>
+      </div>
+      <div class="how2use-contents-r">
+        <div class="how2use-details-wrapper">
+          <div class="how2use-details-l">
+            <div class="empty-stick-min"></div>
+            <div class="circle-min">1</div>
+            <div class="stick-min"></div>
+          </div>
+          <div class="how2use-details-r">制作するWebサイトに載せたいコンテンツを選択する</div>
+        </div>
+        <div class="how2use-details-wrapper">
+          <div class="how2use-details-l">
+            <div class="stick-min"></div>
+            <div class="circle-min">2</div>
+            <div class="stick-min"></div>
+          </div>
+          <div class="how2use-details-r">見積もりボタンを押して、見積もり金額を確認する</div>
+        </div>
+        <div class="how2use-details-wrapper">
+          <div class="how2use-details-l">
+            <div class="stick-min"></div>
+            <div class="circle-min">3</div>
+            <div class="empty-stick-min"></div>
+          </div>
+          <div class="how2use-details-r">「この内容でお問い合わせる」ボタンを押してお問い合わせを送る</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -58,16 +93,105 @@
 .how2use-contents-l {
   width: 20%;
   height: 300px;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .how2use-contents-c {
   width: 20%;
-  background-color: #20d8ba;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
 }
 .how2use-contents-r {
   width: 60%;
-  background-color: red;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .how2use-contents-l {
+    display: none;
+  }
+  .how2use-contents-c {
+    width: 40%;
+  }
+}
+.empty-stick {
+  width: 0;
+  height: 100px;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #20d8ba;
+  display: grid;
+  place-items: center;
+}
+.stick {
+  width: 7px;
+  height: 100px;
+  background-color: #20d8ba;
+}
+.how2use-step {
+  color: #4cdfc7;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.how2use-title {
+  color: #17171b;
+  font-size: 1.2rem;
+}
+.how2use-subtitle {
+  color: #909090;
+}
+.how2use-details-wrapper {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+}
+.empty-stick-min {
+  width: 0;
+  height: 25px;
+}
+.circle-min {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #20d8ba;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding-bottom: 2px;
+  color: #ffffff;
+}
+.stick-min {
+  width: 3px;
+  height: 25px;
+  background-color: #20d8ba;
+}
+.how2use-details-l {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how2use-details-r {
+  width: 80%;
+  font-weight: 700;
+  color: #17171b;
+}
+@media screen and (max-width: 480px) {
+  .how2use-details-r {
+    padding-left: 15px;
+    font-size: 0.8rem;
+  }
 }
 </style>
