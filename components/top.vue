@@ -1,29 +1,41 @@
 <template>
-  <div class="main-visual">
-    <div class="main-visual-background">
-      <div class="main-visual-l">
-        <div class="main-visual-label-wrapper">
-          <div class="main-visual-label-url">
-            <p>team-steg.com</p>
-          </div>
-          <div class="main-visual-label-l"></div>
-          <div class="main-visual-label-r">
-            <div class="main-visual-label-r-contents">
-              <div class="label-title">
-                <p>Steg Quote System</p>
-              </div>
+  <div class="top-wrapper">
+    <div class="main-visual">
+      <div class="main-visual-background">
+        <div class="main-visual-l">
+          <div class="main-visual-label-wrapper">
+            <div class="main-visual-label-url">
+              <p>team-steg.com</p>
+            </div>
+            <div class="main-visual-label-l"></div>
+            <div class="main-visual-label-r">
+              <div class="main-visual-label-r-contents">
+                <div class="label-title">
+                  <p>Steg Quote System</p>
+                </div>
 
-              <div class="label-subtitle">
-                <p>Webサイト制作料金見積もりシステム</p>
+                <div class="label-subtitle">
+                  <p>Webサイト制作料金見積もりシステム</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="main-visual-r">
-        <div class="steg-logo">
-          <img src="img/steg-logo-light.png" alt="circle-logo" />
+        <div class="main-visual-r">
+          <div class="steg-logo">
+            <img src="img/steg-logo-light.png" alt="circle-logo" />
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="how2use-wrapper">
+      <div class="how2use-label">
+        <p>使い方</p>
+      </div>
+      <div class="how2use-contents">
+        <div class="hew2use-contents-l"></div>
+        <div class="how2use-contents-c"></div>
+        <div class="how2use-contentsr"></div>
       </div>
     </div>
   </div>
@@ -111,5 +123,43 @@
   .label-subtitle p {
     font-size: 0.8rem;
   }
+}
+.how2use-wrapper {
+  width: 100%;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how2use-label {
+  width: 60%;
+  height: 80px;
+  background: #20d8ba;
+  padding: 0.4em 0.8em 0.3em;
+  margin: 0 0 1em;
+  text-align: left;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.how2use-label::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #20d8ba;
+  width: 0;
+  height: 0;
+}
+.how2use-label p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 </style>

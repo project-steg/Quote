@@ -32,7 +32,7 @@
     <v-app-bar app color="#20d8ba" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>
-        <div class="title-color">Stegホームページ作成見積もりシステム</div>
+        <div class="title-color">Steg Webサイト作成見積もりシステム</div>
       </v-toolbar-title>
     </v-app-bar>
 
