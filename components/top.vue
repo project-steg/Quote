@@ -7,7 +7,17 @@
             <p>team-steg.com</p>
           </div>
           <div class="main-visual-label-l"></div>
-          <div class="main-visual-label-r"></div>
+          <div class="main-visual-label-r">
+            <div class="main-visual-label-r-contents">
+              <div class="label-title">
+                <p>Steg Quote System</p>
+              </div>
+
+              <div class="label-subtitle">
+                <p>Webサイト制作料金見積もりシステム</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="main-visual-r">
@@ -25,7 +35,7 @@
 }
 .main-visual-background {
   width: 100%;
-  height: 800px;
+  height: 80vh;
   display: flex;
 }
 .main-visual-l {
@@ -51,10 +61,11 @@
 .main-visual-label-wrapper {
   width: 90vw;
   max-width: 700px;
-  height: 300px;
+  max-height: 300px;
+  height: 60vh;
   background-color: #ffffff;
   position: absolute;
-  top: 250px;
+  top: calc(40vh - 150px);
   display: flex;
   align-items: center;
 }
@@ -73,12 +84,22 @@
   margin: 0;
 }
 .main-visual-label-l {
-  width: 10%;
+  width: 6%;
   height: 100%;
   background-color: #20d8ba;
 }
 .main-visual-label-r {
-  width: 80%;
+  width: 84%;
   height: 100%;
+  display: grid;
+  place-items: center;
+}
+.main-visual-label-r-contents {
+  display: flex;
+  flex-direction: column;
+}
+.label-title p {
+  font-size: 3.5rem;
+  font-weight: 900;
 }
 </style>
