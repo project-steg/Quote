@@ -97,9 +97,19 @@
 .main-visual-label-r-contents {
   display: flex;
   flex-direction: column;
+  margin: 0 25px;
 }
 .label-title p {
   font-size: 3.5rem;
   font-weight: 900;
+}
+@media screen and (max-width: 480px) {
+  .label-title p {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  .label-subtitle p {
+    font-size: 0.8rem;
+  }
 }
 </style>
