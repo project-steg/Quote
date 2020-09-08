@@ -43,9 +43,6 @@
         <result v-if="$store.state.viewPage === 3" />
       </div>
     </v-main>
-    <v-footer color="#20d8ba" app>
-      <span class="white--text">&copy; {{ new Date().getFullYear() }} Steg Inc. All right reserved</span>
-    </v-footer>
   </v-app>
 </template>
 

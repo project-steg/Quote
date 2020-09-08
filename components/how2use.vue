@@ -302,6 +302,7 @@
   width: 80%;
   display: flex;
   justify-content: center;
+  border-bottom: 2px dashed #c9f4ed;
 }
 .how2use-contents-l {
   width: 20%;
@@ -332,6 +333,7 @@
   }
   .how2use-contents-c {
     width: 40%;
+    padding-left: 0;
   }
 }
 .empty-stick {
