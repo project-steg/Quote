@@ -6,14 +6,15 @@
       </div>
 
       <div class="quote-result" @vision="resultData">{{checkedName}}</div>
-        <button @click="$store.commit('viewPage', 3)">見積もる</button>
+      <nuxt-link to="/result" tag="div" class="quote-button">
+        <button>見積もる</button>
+      </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
 import contents from "@/components/contents.vue";
-import result from "@/components/result.vue";
 export default {
   data() {
     return {
@@ -35,7 +36,6 @@ export default {
 
   components: {
     contents,
-    result
   },
 };
 </script>
