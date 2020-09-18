@@ -1,7 +1,9 @@
 <template>
   <div class="contents-wrapper" :class="{active:list.select}" @click="selectContents(list.id)">
     <div :class="{check:list.select}"></div>
-    <div class="contents-icon-wrapper"></div>
+    <div class="contents-icon">
+      <img :src="list.img" alt />
+    </div>
   </div>
 </template>
 <script>
@@ -25,6 +27,7 @@ export default {
   border: 3px solid #d1dbda;
   border-radius: 25px;
   filter: drop-shadow(0 3px 6px rgb(0 0 0 16));
+  cursor: pointer;
   padding: 30px;
 }
 
@@ -44,10 +47,18 @@ export default {
   background-position: center;
   border-radius: 50%;
 }
-.contents-icon-wrapper {
+.contents-icon {
   width: 120px;
   height: 120px;
   background-color: #d3f2ed;
   border-radius: 50%;
+  position: relative;
+}
+.contents-icon img {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  top: 22.5%;
+  right: 22.5%;
 }
 </style>

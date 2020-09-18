@@ -260,9 +260,9 @@
       <!---------------------------------------------------------->
     </div>
     <div class="how2use-btn">
-      <button>
+      <nuxt-link to="quote" tag="button">
         <p>見積もってみる</p>
-      </button>
+      </nuxt-link>
     </div>
   </div>
 </template>

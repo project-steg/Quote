@@ -2,14 +2,32 @@ export const state = () => ({
   list: [
     {
       id: 0,
-      name: "企業理念ページ",
+      name: "メインビジュアル",
       value: 10000,
       select: false,
-      img: "../static/img/home-page.svg"
+      img: "img/home-page.svg"
     },
-    { id: 1, name: "お問い合わせ", value: 10000, select: false },
-    { id: 2, name: "企業紹介", value: 10000, select: false },
-    { id: 3, name: "オフィス地図", value: 10000, select: false }
+    {
+      id: 1,
+      name: "会社概要",
+      value: 10000,
+      select: false,
+      img: "img/company.svg"
+    },
+    {
+      id: 2,
+      name: "提携企業",
+      value: 10000,
+      select: false,
+      img: "img/partners.svg"
+    },
+    {
+      id: 3,
+      name: "メンバー一覧",
+      value: 10000,
+      select: false,
+      img: "img/members.svg"
+    }
   ],
   sumValue: 0
 });
