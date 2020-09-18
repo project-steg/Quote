@@ -1,11 +1,12 @@
 <template>
   <div class="quote-wrapper">
-    <div class="container">
-      <div class="contents" v-for="elem in list" :key="elem.id">
-        <contents :list="elem" />
+    <div class="quote-container">
+      <div class="quote-grid">
+        <div class="quote-contents" v-for="elem in list" :key="elem.id">
+          <contents :list="elem" />
+        </div>
       </div>
 
-      <div class="quote-result" @vision="resultData">{{checkedName}}</div>
       <nuxt-link to="/result" tag="div" class="quote-button">
         <button>見積もる</button>
       </nuxt-link>
@@ -18,7 +19,6 @@ import contents from "@/components/contents.vue";
 export default {
   data() {
     return {
-      checkedName: "",
       list: [
         { id: 1, name: "企業理念ページ" },
         { id: 2, name: "お問い合わせ" },
@@ -28,11 +28,6 @@ export default {
       ],
     };
   },
-  methods: {
-    resultData(checkedName) {
-      this.checkedName = checkedName;
-    },
-  },
 
   components: {
     contents,
@@ -41,36 +36,27 @@ export default {
 </script>
 
 <style scoped>
-.quote-wrapper {
-  width: 100%;
+.quote-grid {
   display: grid;
-  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 80px;
+  margin-top: 80px;
 }
-.container {
-  width: 90%;
-  display: grid;
-  place-items: center;
+.quote-contents {
+  width: 300px;
+  height: 330px;
+  margin: auto;
 }
-.contents {
-  width: 80%;
-  height: 75px;
-  margin-top: 30px;
+@media screen and (max-width: 992px) {
+  .quote-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 80px;
+  }
 }
-.quote-button {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  margin-top: 50px;
-}
-button {
-  width: 60%;
-  height: 50px;
-  background-color: #cccccc;
-  filter: drop-shadow(4px 4px 6px #707070);
-  position: relative;
-}
-button:active {
-  filter: drop-shadow(0px 0px 0px);
-  top: 3px;
+@media screen and (max-width: 768px) {
+  .quote-grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 80px;
+  }
 }
 </style>

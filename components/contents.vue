@@ -1,16 +1,5 @@
 <template>
-  <div>
-    <div class="contents-wrapper">
-      <div class="contents-checkbox">
-        <input type="checkbox" id="vision" value="3000円" v-model="checkedName" />
-        <label for="vision"></label>
-        <div>{{checkedName}}</div>
-      </div>
-      <div class="contents-details">
-        <p>{{list.name}}</p>
-      </div>
-    </div>
-  </div>
+  <div class="contents-wrapper"></div>
 </template>
 <script>
 export default {
@@ -20,19 +9,15 @@ export default {
       checkedName: "",
     };
   },
-  methods: {
-    checkedData() {
-      this.$emit("vision", this.checkedName);
-    },
-  },
 };
 </script>
 <style scoped>
 .contents-wrapper {
   width: 100%;
-  height: 75px;
-  background-color: #eeeeee;
+  height: 100%;
   border-radius: 15px;
+  border: 3px solid #d1dbda;
+  filter: drop-shadow(0 3px 6px rgb(0 0 0 16));
   display: flex;
   justify-content: space-between;
 }
