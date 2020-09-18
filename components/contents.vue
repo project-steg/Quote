@@ -1,13 +1,16 @@
 <template>
-  <div class="contents-wrapper"></div>
+  <div class="contents-wrapper" :class="{active:list.select}" @click="selectContents(list.id)">
+    <div :class="{check:list.select}"></div>
+    <div class="contents-icon-wrapper"></div>
+  </div>
 </template>
 <script>
 export default {
   props: ["list"],
-  data() {
-    return {
-      checkedName: "",
-    };
+  methods: {
+    selectContents(id) {
+      this.$store.commit("selectContents", id);
+    },
   },
 };
 </script>
@@ -15,22 +18,36 @@ export default {
 .contents-wrapper {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  border: 3px solid #d1dbda;
-  filter: drop-shadow(0 3px 6px rgb(0 0 0 16));
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 3px solid #d1dbda;
+  border-radius: 25px;
+  filter: drop-shadow(0 3px 6px rgb(0 0 0 16));
+  padding: 30px;
 }
-.contents-checkbox {
-  width: 100px;
-  height: 75px;
-  border-right: #cccccc 1px solid;
-  display: grid;
-  place-items: center;
+
+.active {
+  border: 3px solid #20d8ba;
 }
-.contents-details {
-  width: 100%;
-  display: grid;
-  place-items: center;
+.check {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #20d8ba;
+  background-image: url("../static/img/correct.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  border-radius: 50%;
+}
+.contents-icon-wrapper {
+  width: 120px;
+  height: 120px;
+  background-color: #d3f2ed;
+  border-radius: 50%;
 }
 </style>
