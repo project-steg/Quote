@@ -2,7 +2,7 @@
   <div class="quote-wrapper">
     <div class="quote-container">
       <div class="quote-grid">
-        <div class="quote-contents" v-for="elem in list" :key="elem.id">
+        <div class="quote-contents" v-for="elem in $store.state.list" :key="elem.id">
           <contents :list="elem" />
         </div>
       </div>
@@ -20,11 +20,11 @@ export default {
   data() {
     return {
       list: [
-        { id: 1, name: "企業理念ページ" },
-        { id: 2, name: "お問い合わせ" },
-        { id: 3, name: "企業紹介" },
-        { id: 4, name: "オフィス地図" },
-        { id: 5, name: "代表者挨拶" },
+        // { id: 1, name: "企業理念ページ" },
+        // { id: 2, name: "お問い合わせ" },
+        // { id: 3, name: "企業紹介" },
+        // { id: 4, name: "オフィス地図" },
+        // { id: 5, name: "代表者挨拶" },
       ],
     };
   },
