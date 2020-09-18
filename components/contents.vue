@@ -4,6 +4,12 @@
     <div class="contents-icon">
       <img :src="list.img" alt />
     </div>
+    <div class="contents-name">
+      <p>{{list.name}}</p>
+    </div>
+    <div class="contents-descript">
+      <p>{{list.descript}}</p>
+    </div>
   </div>
 </template>
 <script>
@@ -60,5 +66,21 @@ export default {
   height: 55%;
   top: 22.5%;
   right: 22.5%;
+}
+.contents-name {
+  margin-top: 15px;
+}
+.contents-name p {
+  font-weight: 700;
+  color: #17171b;
+}
+.contents-descript {
+  margin: auto;
+  text-align: center;
+}
+.contents-descript p {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #777777;
 }
 </style>
