@@ -4,6 +4,9 @@
       <p>自分のWebサイトに</p>
       <p>載せたいものをクリック！</p>
     </div>
+    <div class="banner-l-min">
+      <p>自分のWebサイトに載せたいものをクリック！</p>
+    </div>
     <div class="banner-r">
       <bannerContents :list="$store.state.list[0]" />
     </div>
@@ -33,6 +36,9 @@ export default {
   font-size: 2rem;
   color: #ffffff;
 }
+.banner-l-min {
+  display: none;
+}
 .banner-r {
   width: 350px;
   height: 350px;
@@ -42,5 +48,27 @@ export default {
   border-radius: 50%;
   margin-top: 70px;
   padding-bottom: 35px;
+}
+@media screen and (max-width: 992px) {
+  .banner-wrapper {
+    flex-direction: column;
+  }
+  .banner-l {
+    display: none;
+  }
+  .banner-l-min {
+    display: flex;
+    margin-top: 80px;
+  }
+  .banner-l-min p {
+    font-family: "M PLUS Rounded 1c";
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  .banner-r {
+    margin-top: 0;
+    padding-bottom: 35px;
+  }
 }
 </style>
