@@ -1,5 +1,5 @@
 <template>
-  <div class="contents-wrapper active" @click="selectContents(list.id)">
+  <div class="contents-wrapper active">
     <div class="check"></div>
     <div class="contents-icon">
       <img :src="list.img" alt />
@@ -36,7 +36,6 @@ export default {
   border: 2px solid #d1dbda;
   border-radius: 25px;
   box-shadow: 0 2px 3px 1px rgb(20, 20, 20, 0.2);
-  cursor: pointer;
   padding: 20px;
 }
 
