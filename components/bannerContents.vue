@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .contents-wrapper {
   width: 200px;
-  height: 230px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
