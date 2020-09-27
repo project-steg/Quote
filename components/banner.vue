@@ -4,7 +4,7 @@
       <p>自分のWebサイトに</p>
       <p>載せたいものをクリック！</p>
     </div>
-    <div class="banner-l-min">
+    <div class="banner-l-md">
       <p>自分のWebサイトに載せたいものをクリック！</p>
     </div>
     <div class="banner-r">
@@ -29,14 +29,13 @@ export default {
   align-items: center;
   justify-content: space-around;
   background-color: #20d8ba;
-  margin-top: 80px;
 }
 .banner-l p {
   font-family: "M PLUS Rounded 1c";
   font-size: 2rem;
   color: #ffffff;
 }
-.banner-l-min {
+.banner-l-md {
   display: none;
 }
 .banner-r {
@@ -56,15 +55,17 @@ export default {
   .banner-l {
     display: none;
   }
-  .banner-l-min {
+  .banner-l-md {
     display: flex;
     margin-top: 80px;
   }
-  .banner-l-min p {
+  .banner-l-md p {
     font-family: "M PLUS Rounded 1c";
     font-size: 1rem;
     color: #ffffff;
     margin-bottom: 5px;
+    text-align: center;
+    padding: 0 1rem;
   }
   .banner-r {
     margin-top: 0;

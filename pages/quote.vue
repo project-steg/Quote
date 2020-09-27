@@ -3,7 +3,11 @@
     <div class="quote-container">
       <banner />
       <div class="quote-grid">
-        <div class="quote-contents" v-for="elem in $store.state.list" :key="elem.id">
+        <div
+          class="quote-contents"
+          v-for="elem in $store.state.list"
+          :key="elem.id"
+        >
           <contents :list="elem" />
         </div>
       </div>
@@ -36,6 +40,7 @@ export default {
 .quote-container {
   width: 90%;
   max-width: 1200px;
+  margin: 80px 0;
 }
 .quote-grid {
   width: 100%;
@@ -49,30 +54,26 @@ export default {
   height: 330px;
   margin: auto;
 }
-.quote-button button {
-  width: 500px;
-  height: 75px;
+.quote-button {
   margin-top: 50px;
-  background-color: #20d8ba;
   display: grid;
   place-items: center;
 }
 .quote-button button {
+  width: 500px;
+  height: 75px;
   color: #ffffff;
   font-weight: 700;
+  background-color: #20d8ba;
 }
 .quote-button button:hover {
   width: 500px;
   height: 75px;
-  margin-top: 50px;
   background-color: #ffffff;
   border: 4px solid #20d8ba;
+  color: #20d8ba;
   display: grid;
   place-items: center;
-}
-.quote-button button:hover {
-  color: #20d8ba;
-  font-weight: 700;
 }
 @media screen and (max-width: 992px) {
   .quote-grid {
