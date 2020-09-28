@@ -14,11 +14,18 @@ export default {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ 
-      rel: "icon", type: "image/x-icon", href: "/favicon.ico" ,
-      rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900',
-      rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css',
-    }]
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Roboto:700",
+        rel: "stylesheet",
+        href:
+          "https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -39,9 +46,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/vuetify'
-  ],
+  modules: ["@nuxtjs/vuetify"],
   /*
    ** Build configuration
    */
