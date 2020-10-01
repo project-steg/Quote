@@ -11,15 +11,18 @@
           <div class="arrow"></div>
         </div>
       </div>
+      <div class="result-detail">
+        <resultDetail />
+      </div>
     </div>
   </div>
 </template>
 <script>
-//import resultBtn from "@/components/resultBtn.vue";
+import resultDetail from "@/components/resultDetail.vue";
 export default {
-  // components: {
-  //   resultBtn
-  // }
+  components: {
+    resultDetail
+  }
 };
 </script>
 <style scoped>
@@ -93,5 +96,12 @@ export default {
   border-bottom: 2px solid #17171b;
   transform: rotate(45deg);
   background: transparent;
+}
+.result-detail-contents {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #f0f2f2;
+  padding: 50px 0;
 }
 </style>
