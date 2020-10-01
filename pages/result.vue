@@ -1,15 +1,27 @@
 <template>
   <div class="result-wrapper">
     <div class="resulut-container">
-      <div class="result-contents">
+      <div class="result-price-contents">
         <div class="result-contents-title">見積もり金額</div>
         <div class="result-price">
-          <div class="result-price-contents">98,000円</div>
+          <div class="result-price-num">98,000円</div>
+        </div>
+        <div class="result-btn">
+          <span>この内容でお問い合わせする</span>
+          <div class="arrow"></div>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+//import resultBtn from "@/components/resultBtn.vue";
+export default {
+  // components: {
+  //   resultBtn
+  // }
+};
+</script>
 <style scoped>
 .result-wrapper {
   width: 100%;
@@ -17,10 +29,11 @@
 .result-container {
   width: 100%;
 }
-.result-contents {
+.result-price-contents {
   width: 100%;
   height: 500px;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   background-color: #20d8ba;
@@ -36,13 +49,13 @@
   position: relative;
   margin-top: 130px;
 }
-.result-price-contents {
+.result-price-num {
   font-size: 4rem;
   font-weight: 700;
   font-family: "Roboto";
   color: #ffffff;
 }
-.result-price-contents::before {
+.result-price-num::before {
   width: 2rem;
   left: -100px;
   bottom: 2rem;
@@ -50,5 +63,35 @@
   font-size: 1rem;
   position: absolute;
   color: #ffffff;
+}
+.result-btn {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -25px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  filter: drop-shadow(0px 3px 6px #cccccc);
+  cursor: pointer;
+}
+.result-btn:active {
+  filter: drop-shadow(0px 0px 0px #ffffff);
+  bottom: -27px;
+}
+.result-btn span {
+  margin: 0 15px;
+  font-weight: 700;
+}
+.arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #17171b;
+  border-bottom: 2px solid #17171b;
+  transform: rotate(45deg);
+  background: transparent;
 }
 </style>
