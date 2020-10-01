@@ -97,11 +97,11 @@ export default {
   transform: rotate(45deg);
   background: transparent;
 }
-.result-detail-contents {
+.result-detail {
   width: 100%;
   display: grid;
   place-items: center;
   background-color: #f0f2f2;
-  padding: 50px 0;
+  padding: 80px 0;
 }
 </style>
