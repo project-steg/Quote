@@ -6,7 +6,7 @@
       <p class="result-detail-descript">{{ list.descript }}</p>
     </div>
     <div class="result-detail-contents-r">
-      <p>{{ list.value }}円</p>
+      <p>{{ list.value | numberWithDelimiter }}円</p>
     </div>
   </div>
 </template>
