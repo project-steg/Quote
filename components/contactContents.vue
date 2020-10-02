@@ -26,6 +26,7 @@
         <textarea
           placeholder="お問い合わせ内容"
           name="entry.264940659"
+          :value="$store.state.sumValue + '円'"
           required
         ></textarea>
       </div>
@@ -37,6 +38,9 @@
     </form>
   </div>
 </template>
+<script>
+export default {};
+</script>
 <style scoped>
 .result-contact-wrapper {
   width: 100%;

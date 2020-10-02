@@ -35,7 +35,8 @@ export const state = () => ({
       descript: "社員やメンバーを一覧表示で載せます。"
     }
   ],
-  sumValue: 0
+  sumValue: 0,
+  contactText: "ああああ"
 });
 
 export const mutations = {
@@ -46,5 +47,14 @@ export const mutations = {
     } else {
       state.sumValue -= state.list[id].value;
     }
+  }
+};
+
+export const getters = {
+  sumValue: state => {
+    return state.sumValue.filter("numberWithDelimiter", function(value) {
+      if (!value) return "0";
+      return value.toString().replace(/(\d)(?=(\d{3})+$)/g, "$1,");
+    });
   }
 };
