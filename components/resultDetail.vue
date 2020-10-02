@@ -13,8 +13,8 @@
 import resultDetailContents from "@/components/resultDetailContents.vue";
 export default {
   components: {
-    resultDetailContents
-  }
+    resultDetailContents,
+  },
 };
 </script>
 <style scoped>
@@ -28,5 +28,8 @@ export default {
   background-color: #ffffff;
   border-radius: 50px;
   padding: 50px 0;
+}
+.result-detail-contents {
+  width: 90%;
 }
 </style>
