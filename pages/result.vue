@@ -1,6 +1,6 @@
 <template>
   <div class="result-wrapper">
-    <div class="resulut-container">
+    <div class="result-container">
       <div class="result-price-contents">
         <div class="result-contents-title">見積もり金額</div>
         <div class="result-price">
@@ -16,14 +16,19 @@
       <div class="result-detail">
         <resultDetail />
       </div>
+      <div class="result-contact">
+        <resultContact />
+      </div>
     </div>
   </div>
 </template>
 <script>
 import resultDetail from "@/components/resultDetail.vue";
+import resultContact from "@/components/resultContact.vue";
 export default {
   components: {
     resultDetail,
+    resultContact,
   },
 };
 </script>
@@ -33,6 +38,9 @@ export default {
 }
 .result-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .result-price-contents {
   width: 100%;
@@ -105,5 +113,11 @@ export default {
   place-items: center;
   background-color: #f0f2f2;
   padding: 80px 0;
+}
+.result-contact {
+  max-width: 1000px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 </style>
