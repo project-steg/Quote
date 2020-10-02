@@ -25,7 +25,9 @@
               <div class="circle-min">1</div>
               <div class="stick-min"></div>
             </div>
-            <div class="how2use-details-r">制作するWebサイトに載せたいコンテンツを選択する</div>
+            <div class="how2use-details-r">
+              制作するWebサイトに載せたいコンテンツを選択する
+            </div>
           </div>
           <div class="how2use-details-wrapper">
             <div class="how2use-details-l">
@@ -33,7 +35,9 @@
               <div class="circle-min">2</div>
               <div class="stick-min"></div>
             </div>
-            <div class="how2use-details-r">見積もりボタンを押して、見積もり金額を確認する</div>
+            <div class="how2use-details-r">
+              見積もりボタンを押して、見積もり金額を確認する
+            </div>
           </div>
           <div class="how2use-details-wrapper">
             <div class="how2use-details-l">
@@ -41,7 +45,9 @@
               <div class="circle-min">3</div>
               <div class="empty-stick-min"></div>
             </div>
-            <div class="how2use-details-r">「この内容でお問い合わせる」ボタンを押してお問い合わせを送る</div>
+            <div class="how2use-details-r">
+              「この内容でお問い合わせる」ボタンを押してお問い合わせを送る
+            </div>
           </div>
         </div>
       </div>
@@ -103,7 +109,9 @@
               <div class="circle-min">1</div>
               <div class="stick-min"></div>
             </div>
-            <div class="how2use-details-r">送信したお問い合わせに対しての返信を確認する</div>
+            <div class="how2use-details-r">
+              送信したお問い合わせに対しての返信を確認する
+            </div>
           </div>
           <div class="how2use-details-wrapper">
             <div class="how2use-details-l">
@@ -111,7 +119,9 @@
               <div class="circle-min">2</div>
               <div class="stick-min"></div>
             </div>
-            <div class="how2use-details-r">詳細な見積もり、制作物の確認のやりとりを行う</div>
+            <div class="how2use-details-r">
+              詳細な見積もり、制作物の確認のやりとりを行う
+            </div>
           </div>
           <div class="how2use-details-wrapper">
             <div class="how2use-details-l">
@@ -119,7 +129,9 @@
               <div class="circle-min">3</div>
               <div class="empty-stick-min"></div>
             </div>
-            <div class="how2use-details-r">予算・制作物ともに合意したら、Webサイトの制作依頼が完了する</div>
+            <div class="how2use-details-r">
+              予算・制作物ともに合意したら、Webサイトの制作依頼が完了する
+            </div>
           </div>
         </div>
       </div>
@@ -174,7 +186,9 @@
               <div class="circle-min">1</div>
               <div class="stick-min"></div>
             </div>
-            <div class="how2use-details-r">当デザイナー・エンジニアが開発を担当する</div>
+            <div class="how2use-details-r">
+              当デザイナー・エンジニアが開発を担当する
+            </div>
           </div>
           <div class="how2use-details-wrapper">
             <div class="how2use-details-l">
@@ -182,7 +196,9 @@
               <div class="circle-min">2</div>
               <div class="stick-min"></div>
             </div>
-            <div class="how2use-details-r">コンテンツ内の修正や変更は基本的に無料で行える</div>
+            <div class="how2use-details-r">
+              コンテンツ内の修正や変更は基本的に無料で行える
+            </div>
           </div>
           <div class="how2use-details-wrapper">
             <div class="how2use-details-l">
@@ -237,7 +253,9 @@
               <div class="circle-min">1</div>
               <div class="stick-min"></div>
             </div>
-            <div class="how2use-details-r">完成した制作物に不備・不満がないか確認する</div>
+            <div class="how2use-details-r">
+              完成した制作物に不備・不満がないか確認する
+            </div>
           </div>
           <div class="how2use-details-wrapper">
             <div class="how2use-details-l">

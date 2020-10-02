@@ -40,6 +40,9 @@ export default {
 };
 </script>
 <style scoped>
+.top-wrapper {
+  margin-bottom: 160px;
+}
 .main-visual {
   width: 100%;
   height: 100%;

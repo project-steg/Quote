@@ -36,6 +36,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 80px;
 }
 .quote-container {
   width: 90%;
@@ -47,7 +48,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 80px;
-  margin-top: 140px;
+  margin: 100px 0px;
 }
 .quote-contents {
   width: 300px;
@@ -55,7 +56,6 @@ export default {
   margin: auto;
 }
 .quote-button {
-  margin-top: 50px;
   display: grid;
   place-items: center;
 }

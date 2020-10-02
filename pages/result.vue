@@ -8,33 +8,39 @@
             {{ $store.state.sumValue | numberWithDelimiter }}円
           </div>
         </div>
-        <div class="result-btn">
+        <nuxt-link
+          class="result-btn"
+          tag="div"
+          v-scroll-to="'#result-contact'"
+          to
+        >
           <span>この内容でお問い合わせする</span>
           <div class="arrow"></div>
-        </div>
+        </nuxt-link>
       </div>
       <div class="result-detail">
         <resultDetail />
       </div>
-      <div class="result-contact">
-        <resultContact />
+      <div id="result-contact">
+        <contactContents />
       </div>
     </div>
   </div>
 </template>
 <script>
 import resultDetail from "@/components/resultDetail.vue";
-import resultContact from "@/components/resultContact.vue";
+import contactContents from "@/components/contactContents.vue";
 export default {
   components: {
     resultDetail,
-    resultContact,
+    contactContents,
   },
 };
 </script>
 <style scoped>
 .result-wrapper {
   width: 100%;
+  margin-bottom: 80px;
 }
 .result-container {
   width: 100%;
@@ -114,10 +120,11 @@ export default {
   background-color: #f0f2f2;
   padding: 80px 0;
 }
-.result-contact {
+#result-contact {
   max-width: 1000px;
   width: 80%;
   display: flex;
   justify-content: center;
+  margin-top: 80px;
 }
 </style>

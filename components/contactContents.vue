@@ -29,13 +29,19 @@
           required
         ></textarea>
       </div>
-      <button type="submit" class="form-button">送信</button>
+      <div class="contact-btn">
+        <button type="submit" class="form-button">
+          <p>送信</p>
+        </button>
+      </div>
     </form>
   </div>
 </template>
 <style scoped>
 .result-contact-wrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .form-contents {
   display: flex;
@@ -58,10 +64,10 @@ input {
   border-radius: 5px;
   padding: 0 0.5rem;
 }
-.form-contents::placeholder {
+.form-contents input::placeholder {
   color: #9696aa;
 }
-.form-contents:focus {
+.form-contents input:focus {
   outline: none;
   box-shadow: 0 0 0 2px #20d8ba;
 }
@@ -98,5 +104,33 @@ textarea:focus {
   .form-contents input {
     width: 100%;
   }
+}
+.contact-btn button {
+  width: 500px;
+  height: 75px;
+  margin: 50px auto 0;
+  background-color: #20d8ba;
+  display: grid;
+  place-items: center;
+}
+.contact-btn button:hover {
+  width: 500px;
+  height: 75px;
+  margin-top: 50px;
+  background-color: #ffffff;
+  border: 4px solid #20d8ba;
+  display: grid;
+  place-items: center;
+}
+.contact-btn p {
+  color: #ffffff;
+  font-weight: 700;
+}
+.contact-btn button:hover p {
+  color: #20d8ba;
+  font-weight: 700;
+}
+p {
+  margin: 0;
 }
 </style>

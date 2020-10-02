@@ -40,7 +40,8 @@ export default {
    */
   plugins: [
     "~/plugins/valueFilter.js",
-    { src: "~/plugins/localStorage.js", ssr: false }
+    { src: "~/plugins/localStorage.js", ssr: false },
+    "~plugins/vue-scrollto"
   ],
   /*
    ** Nuxt.js dev-modules
