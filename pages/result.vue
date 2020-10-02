@@ -4,7 +4,9 @@
       <div class="result-price-contents">
         <div class="result-contents-title">見積もり金額</div>
         <div class="result-price">
-          <div class="result-price-num">98,000円</div>
+          <div class="result-price-num">
+            {{ $store.state.sumValue | numberWithDelimiter }}円
+          </div>
         </div>
         <div class="result-btn">
           <span>この内容でお問い合わせする</span>
@@ -21,8 +23,8 @@
 import resultDetail from "@/components/resultDetail.vue";
 export default {
   components: {
-    resultDetail
-  }
+    resultDetail,
+  },
 };
 </script>
 <style scoped>
