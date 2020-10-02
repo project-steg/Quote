@@ -41,12 +41,10 @@ export const state = () => ({
 export const mutations = {
   selectContents(state, id) {
     state.list[id].select = !state.list[id].select;
-    console.log(state.list[id].select);
     if (state.list[id].select) {
       state.sumValue += state.list[id].value;
     } else {
       state.sumValue -= state.list[id].value;
     }
-    console.log(state.sumValue);
   }
 };
