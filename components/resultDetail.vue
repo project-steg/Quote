@@ -1,11 +1,7 @@
 <template>
   <div class="result-detail-wrapper">
-    <div v-if="$store.state.sumValue === 0">項目がありません</div>
-    <div
-      class="result-detail-contents"
-      v-for="elem in $store.state.list"
-      :key="elem.id"
-    >
+    <div v-if="sumValue === 0">項目がありません</div>
+    <div class="result-detail-contents" v-for="elem in list" :key="elem.id">
       <div v-if="elem.select">
         <resultDetailContents :list="elem" />
       </div>
@@ -14,7 +10,14 @@
 </template>
 <script>
 import resultDetailContents from "@/components/resultDetailContents.vue";
+import { mapState } from "vuex";
 export default {
+  computed: {
+    ...mapState({
+      sumValue: (state) => state.sumValue,
+      list: (state) => state.list,
+    }),
+  },
   components: {
     resultDetailContents,
   },

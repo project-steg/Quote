@@ -30,7 +30,13 @@
 <script>
 import resultDetail from "@/components/resultDetail.vue";
 import contactContents from "@/components/contactContents.vue";
+import { mapState } from "vuex";
 export default {
+  computed: {
+    ...mapState({
+      sumValue: (state) => state.sumValue,
+    }),
+  },
   components: {
     resultDetail,
     contactContents,

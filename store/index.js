@@ -36,7 +36,7 @@ export const state = () => ({
     }
   ],
   sumValue: 0,
-  contactText: "ああああ"
+  contactText: ""
 });
 
 export const mutations = {
@@ -47,14 +47,14 @@ export const mutations = {
     } else {
       state.sumValue -= state.list[id].value;
     }
-  }
-};
-
-export const getters = {
-  sumValue: state => {
-    return state.sumValue.filter("numberWithDelimiter", function(value) {
-      if (!value) return "0";
-      return value.toString().replace(/(\d)(?=(\d{3})+$)/g, "$1,");
+  },
+  contactText(state) {
+    state.contactText = "";
+    state.list.forEach(element => {
+      if (element.select) {
+        state.contactText += element.name + "\n";
+      }
     });
+    console.log(state.contactText);
   }
 };

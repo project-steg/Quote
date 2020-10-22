@@ -26,7 +26,7 @@
         <textarea
           placeholder="お問い合わせ内容"
           name="entry.264940659"
-          :value="$store.state.sumValue + '円'"
+          :value="contactText"
           required
         ></textarea>
       </div>
@@ -39,7 +39,14 @@
   </div>
 </template>
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState({
+      contactText: (state) => state.contactText,
+    }),
+  },
+};
 </script>
 <style scoped>
 .result-contact-wrapper {

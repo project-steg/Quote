@@ -3,17 +3,13 @@
     <div class="quote-container">
       <banner />
       <div class="quote-grid">
-        <div
-          class="quote-contents"
-          v-for="elem in $store.state.list"
-          :key="elem.id"
-        >
+        <div class="quote-contents" v-for="elem in list" :key="elem.id">
           <contents :list="elem" />
         </div>
       </div>
 
       <nuxt-link to="/result" tag="div" class="quote-button">
-        <button>この内容で見積もる！</button>
+        <button @click="contactText">この内容で見積もる！</button>
       </nuxt-link>
     </div>
   </div>
@@ -22,7 +18,16 @@
 <script>
 import contents from "@/components/contents.vue";
 import banner from "@/components/banner.vue";
+import { mapState, mapMutations } from "vuex";
 export default {
+  computed: {
+    ...mapState({
+      list: (state) => state.list,
+    }),
+  },
+  methods: {
+    ...mapMutations(["contactText"]),
+  },
   components: {
     contents,
     banner,
