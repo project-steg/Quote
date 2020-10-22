@@ -55,6 +55,12 @@ export const mutations = {
         state.contactText += element.name + "\n";
       }
     });
-    console.log(state.contactText);
+    state.contactText =
+      "見積もり結果\n----------\n" +
+      state.contactText +
+      "合計金額：" +
+      state.sumValue +
+      "円\n----------\n" +
+      "※こちらの内容をもとに、改めてお見積もりの連絡をさせていただきます。\nその他ご要望がありましたら以下に御記載ください。\n----------";
   }
 };

@@ -5,7 +5,7 @@
         <div class="result-contents-title">見積もり金額</div>
         <div class="result-price">
           <div class="result-price-num">
-            {{ $store.state.sumValue | numberWithDelimiter }}円
+            {{ sumValue | numberWithDelimiter }}円
           </div>
         </div>
         <nuxt-link
