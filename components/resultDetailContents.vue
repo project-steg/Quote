@@ -52,4 +52,6 @@ export default {
   font-weight: 700;
   color: #404040;
 }
+@media screen and (max-width: 800px) {
+}
 </style>

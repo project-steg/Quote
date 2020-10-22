@@ -28,7 +28,6 @@
             <textarea
               placeholder="お問い合わせ内容"
               name="entry.264940659"
-              :value="contactText"
               required
             ></textarea>
           </div>
@@ -42,14 +41,6 @@
     </div>
   </div>
 </template>
-<script>
-import contactContents from "@/components/contactContents.vue";
-export default {
-  components: {
-    contactContents,
-  },
-};
-</script>
 <style scoped>
 .contact-wrapper {
   width: 100%;
@@ -129,7 +120,8 @@ textarea:focus {
   }
 }
 .contact-btn button {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   height: 75px;
   margin: 50px auto 0;
   background-color: #20d8ba;

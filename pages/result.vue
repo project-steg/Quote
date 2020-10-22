@@ -90,7 +90,8 @@ export default {
   color: #ffffff;
 }
 .result-btn {
-  width: 400px;
+  max-width: 400px;
+  width: 90%;
   height: 50px;
   display: flex;
   justify-content: center;

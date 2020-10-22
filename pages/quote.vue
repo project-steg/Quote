@@ -65,7 +65,8 @@ export default {
   place-items: center;
 }
 .quote-button button {
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   height: 75px;
   color: #ffffff;
   font-weight: 700;
