@@ -447,6 +447,9 @@
 }
 .how2use-btn {
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .how2use-btn button {
   max-width: 500px;

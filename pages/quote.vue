@@ -48,6 +48,11 @@ export default {
   max-width: 1200px;
   margin: 80px 0;
 }
+@media screen and (max-width: 768px) {
+  .quote-container {
+    margin: 20px 0;
+  }
+}
 .quote-grid {
   width: 100%;
   display: grid;

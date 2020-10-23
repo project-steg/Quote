@@ -5,7 +5,7 @@ export const state = () => ({
       name: "メインビジュアル",
       value: 10000,
       select: false,
-      img: "img/home-page.svg",
+      img: "../static/img/home-page.svg",
       descript:
         "トップページの一番目立つところに画像やロゴ、タグラインなどを載せます。"
     },
