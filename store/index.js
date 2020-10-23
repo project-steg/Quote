@@ -5,7 +5,7 @@ export const state = () => ({
       name: "メインビジュアル",
       value: 10000,
       select: false,
-      img: "../static/img/home-page.svg",
+      img: require("@/static/img/home-page.svg"),
       descript:
         "トップページの一番目立つところに画像やロゴ、タグラインなどを載せます。"
     },
@@ -14,7 +14,7 @@ export const state = () => ({
       name: "会社概要",
       value: 10000,
       select: false,
-      img: "img/company.svg",
+      img: require("@/static/img/company.svg"),
       descript:
         "自分たちの会社や団体の紹介文をイメージ画像などとともに載せます。"
     },
@@ -23,7 +23,7 @@ export const state = () => ({
       name: "提携企業",
       value: 10000,
       select: false,
-      img: "img/partners.svg",
+      img: require("@/static/img/partners.svg"),
       descript: "協賛や提携などをしている企業や団体の一覧を載せます。"
     },
     {
@@ -31,7 +31,7 @@ export const state = () => ({
       name: "メンバー一覧",
       value: 10000,
       select: false,
-      img: "img/members.svg",
+      img: require("@/static/img/members.svg"),
       descript: "社員やメンバーを一覧表示で載せます。"
     }
   ],

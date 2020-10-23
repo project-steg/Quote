@@ -1,14 +1,18 @@
 <template>
-  <div class="contents-wrapper" :class="{active:list.select}" @click="selectContents(list.id)">
-    <div :class="{check:list.select}"></div>
+  <div
+    class="contents-wrapper"
+    :class="{ active: list.select }"
+    @click="selectContents(list.id)"
+  >
+    <div :class="{ check: list.select }"></div>
     <div class="contents-icon">
-      <img :src="list.img" alt />
+      <img :src="list.img" />
     </div>
     <div class="contents-name">
-      <p>{{list.name}}</p>
+      <p>{{ list.name }}</p>
     </div>
     <div class="contents-descript">
-      <p>{{list.descript}}</p>
+      <p>{{ list.descript }}</p>
     </div>
   </div>
 </template>
