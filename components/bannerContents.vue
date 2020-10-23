@@ -5,13 +5,13 @@
       <img :src="list.img" alt />
     </div>
     <div class="contents-name">
-      <p>{{list.name}}</p>
+      <p>{{ list.name }}</p>
     </div>
     <div class="contents-descript">
-      <p>{{list.descript}}</p>
+      <p>{{ list.descript }}</p>
     </div>
     <div class="cursor">
-      <img src="img/cursor.svg" alt="cursor-icon" />
+      <img :src="require('@/static/img/cursor.svg')" alt="cursor-icon" />
     </div>
   </div>
 </template>
