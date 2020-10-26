@@ -7,7 +7,16 @@ export const state = () => ({
 });
 
 export const mutations = {
+  setItems(state, { list }) {
+    state.list = list;
+    state.list.forEach(element => {
+      element.index = state.index;
+      state.index++;
+    });
+    return state.list;
+  },
   selectContents(state, index) {
+    console.log(state.list);
     state.list[index].select = !state.list[index].select;
     if (state.list[index].select) {
       state.sumValue += state.list[index].value;
@@ -29,14 +38,6 @@ export const mutations = {
       state.sumValue +
       "円\n----------\n" +
       "※こちらの内容をもとに、改めてお見積もりの連絡をさせていただきます。\nその他ご要望がありましたら以下に御記載ください。\n----------";
-  },
-  setItems(state, { list }) {
-    state.list = list;
-    state.list.forEach(element => {
-      element.index = state.index;
-      state.index++;
-    });
-    console.log(state.list);
   }
 };
 export const getters = {

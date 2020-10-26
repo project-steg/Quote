@@ -1,6 +1,6 @@
 <template>
   <div class="result-detail-contents-wrapper">
-    <div class="result-detail-contents-l"><img :src="list.img" alt /></div>
+    <div class="result-detail-contents-l"><img :src="list.img.url" alt /></div>
     <div class="result-detail-contents-c">
       <p class="result-detail-name">{{ list.name }}</p>
       <p class="result-detail-descript">{{ list.descript }}</p>
