@@ -1,9 +1,15 @@
+require("dotenv").config();
+const { API_KEY } = process.env;
 export default {
   mode: "spa",
   /*
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: "ja",
+      prefix: "og: http://ogp.me/ns#"
+    },
     title: process.env.npm_package_name || "",
     meta: [
       { charset: "utf-8" },
@@ -59,5 +65,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  env: {
+    API_KEY
   }
 };
