@@ -25,6 +25,7 @@ export default {
   margin-bottom: 15px;
 }
 .result-detail-contents-l {
+  display: flex;
   width: 10%;
 }
 .result-detail-contents-l img {
@@ -45,6 +46,7 @@ export default {
   color: #777777;
 }
 .result-detail-contents-r {
+  display: flex;
   width: 20%;
 }
 .result-detail-contents-r p {
@@ -53,5 +55,19 @@ export default {
   color: #404040;
 }
 @media screen and (max-width: 800px) {
+  .result-detail-contents-wrapper {
+    flex-direction: column;
+  }
+  .result-detail-contents-l {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .result-detail-contents-c {
+    align-items: center;
+  }
+  .result-detail-contents-r {
+    width: 90%;
+    justify-content: center;
+  }
 }
 </style>
