@@ -14,7 +14,6 @@ export const mutations = {
       element.index = state.index;
       state.index++;
     });
-    return state.list;
   },
   selectContents(state, index) {
     state.list[index].select = !state.list[index].select;
