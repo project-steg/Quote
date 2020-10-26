@@ -2,7 +2,7 @@
   <div class="contents-wrapper active">
     <div class="check"></div>
     <div class="contents-icon">
-      <img :src="list.img" alt />
+      <img :src="list.img.url" alt />
     </div>
     <div class="contents-name">
       <p>{{ list.name }}</p>
@@ -18,11 +18,6 @@
 <script>
 export default {
   props: ["list"],
-  methods: {
-    selectContents(id) {
-      this.$store.commit("selectContents", id);
-    },
-  },
 };
 </script>
 <style scoped>

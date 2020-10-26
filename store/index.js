@@ -1,51 +1,18 @@
+import axios from "axios";
 export const state = () => ({
-  list: [
-    {
-      id: 0,
-      name: "メインビジュアル",
-      value: 10000,
-      select: false,
-      img: require("@/static/img/home-page.svg"),
-      descript:
-        "トップページの一番目立つところに画像やロゴ、タグラインなどを載せます。"
-    },
-    {
-      id: 1,
-      name: "会社概要",
-      value: 10000,
-      select: false,
-      img: require("@/static/img/company.svg"),
-      descript:
-        "自分たちの会社や団体の紹介文をイメージ画像などとともに載せます。"
-    },
-    {
-      id: 2,
-      name: "提携企業",
-      value: 10000,
-      select: false,
-      img: require("@/static/img/partners.svg"),
-      descript: "協賛や提携などをしている企業や団体の一覧を載せます。"
-    },
-    {
-      id: 3,
-      name: "メンバー一覧",
-      value: 10000,
-      select: false,
-      img: require("@/static/img/members.svg"),
-      descript: "社員やメンバーを一覧表示で載せます。"
-    }
-  ],
+  list: [],
   sumValue: 0,
-  contactText: ""
+  contactText: "",
+  index: 0
 });
 
 export const mutations = {
-  selectContents(state, id) {
-    state.list[id].select = !state.list[id].select;
-    if (state.list[id].select) {
-      state.sumValue += state.list[id].value;
+  selectContents(state, index) {
+    state.list[index].select = !state.list[index].select;
+    if (state.list[index].select) {
+      state.sumValue += state.list[index].value;
     } else {
-      state.sumValue -= state.list[id].value;
+      state.sumValue -= state.list[index].value;
     }
   },
   contactText(state) {
@@ -62,5 +29,27 @@ export const mutations = {
       state.sumValue +
       "円\n----------\n" +
       "※こちらの内容をもとに、改めてお見積もりの連絡をさせていただきます。\nその他ご要望がありましたら以下に御記載ください。\n----------";
+  },
+  setItems(state, { list }) {
+    state.list = list;
+    state.list.forEach(element => {
+      element.index = state.index;
+      state.index++;
+    });
+    console.log(state.list);
+  }
+};
+export const getters = {
+  list: state => state.list
+};
+export const actions = {
+  async fetchItems({ commit }) {
+    await axios
+      .get("https://steg-quote.microcms.io/api/v1/contents?limit=99", {
+        headers: { "X-API-KEY": "42c5d009-7d2a-49d8-807f-69dd65bc6d2f" }
+      })
+      .then(response => {
+        commit("setItems", { list: response.data.contents });
+      });
   }
 };

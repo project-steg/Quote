@@ -2,11 +2,11 @@
   <div
     class="contents-wrapper"
     :class="{ active: list.select }"
-    @click="selectContents(list.id)"
+    @click="selectContents(list.index)"
   >
     <div :class="{ check: list.select }"></div>
     <div class="contents-icon">
-      <img :src="list.img" />
+      <img :src="list.img.url" />
     </div>
     <div class="contents-name">
       <p>{{ list.name }}</p>
@@ -20,8 +20,8 @@
 export default {
   props: ["list"],
   methods: {
-    selectContents(id) {
-      this.$store.commit("selectContents", id);
+    selectContents(index) {
+      this.$store.commit("selectContents", index);
     },
   },
 };

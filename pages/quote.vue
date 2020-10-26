@@ -18,8 +18,14 @@
 <script>
 import contents from "@/components/contents.vue";
 import banner from "@/components/banner.vue";
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapMutations, mapGetters } from "vuex";
 export default {
+  async asyncData({ store }) {
+    if (store.getters["list"].length) {
+      return;
+    }
+    await store.dispatch("fetchItems");
+  },
   computed: {
     ...mapState({
       list: (state) => state.list,
