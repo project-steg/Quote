@@ -44,6 +44,7 @@ export default {
 .result-detail-descript {
   font-size: 0.8rem;
   color: #777777;
+  padding-right: 1rem;
 }
 .result-detail-contents-r {
   display: flex;
@@ -64,6 +65,9 @@ export default {
   }
   .result-detail-contents-c {
     align-items: center;
+  }
+  .result-detail-descript {
+    padding: 0;
   }
   .result-detail-contents-r {
     width: 90%;
