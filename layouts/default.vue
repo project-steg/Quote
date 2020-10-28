@@ -155,5 +155,8 @@ export default {
   .footer-icons svg {
     width: 15px;
   }
+  .title-color {
+    font-size: 0.9rem;
+  }
 }
 </style>
