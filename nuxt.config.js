@@ -77,11 +77,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    "~/plugins/valueFilter.js",
-    { src: "~/plugins/localStorage.js", ssr: false },
-    "~plugins/vue-scrollto"
-  ],
+  plugins: ["~/plugins/valueFilter.js", "~plugins/vue-scrollto"],
   /*
    ** Nuxt.js dev-modules
    */
