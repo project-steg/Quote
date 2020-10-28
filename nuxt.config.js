@@ -40,7 +40,7 @@ export default {
         hid: "og:description",
         property: "og:description",
         content:
-          "Steg Webサイト制作料金見積もりシステム。無料で簡単にWebサイト制作の予算見積もりができます。気に入っていただければそのまま制作依頼をすることができます。"
+          "無料で簡単にWebサイト制作の予算見積もりができます。気に入っていただければそのまま制作依頼をすることができます。"
       },
       {
         hid: "og:image",
