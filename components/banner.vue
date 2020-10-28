@@ -41,8 +41,9 @@ export default {
 .banner-r {
   width: 350px;
   height: 350px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   border-radius: 50%;
   margin-top: 70px;
@@ -51,13 +52,14 @@ export default {
 @media screen and (max-width: 992px) {
   .banner-wrapper {
     flex-direction: column;
+    overflow: hidden;
   }
   .banner-l {
     display: none;
   }
   .banner-l-md {
     display: flex;
-    margin-top: 80px;
+    margin-top: 0px;
   }
   .banner-l-md p {
     font-family: "M PLUS Rounded 1c";
@@ -69,7 +71,11 @@ export default {
   }
   .banner-r {
     margin-top: 0;
-    padding-bottom: 35px;
+    padding-bottom: 0px;
+    width: 320px;
+    align-items: top;
+    position: relative;
+    top: 20px;
   }
 }
 </style>

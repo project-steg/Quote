@@ -82,6 +82,7 @@ export default {
 }
 .result-price-num::before {
   width: 2rem;
+  height: 25px;
   left: -100px;
   bottom: 2rem;
   content: "合計";
@@ -91,7 +92,7 @@ export default {
 }
 .result-btn {
   max-width: 400px;
-  width: 90%;
+  width: 80%;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -133,5 +134,23 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: 80px;
+}
+@media screen and (max-width: 600px) {
+  .result-price-num {
+    font-size: 2.5rem;
+  }
+  .result-price-num::before {
+    width: 2rem;
+    height: 10px;
+    left: -75px;
+    bottom: 2rem;
+    content: "合計";
+    font-size: 1rem;
+    position: absolute;
+    color: #ffffff;
+  }
+  .result-btn span {
+    font-size: 0.9rem;
+  }
 }
 </style>

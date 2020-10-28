@@ -84,7 +84,8 @@ export default {
   background-color: #20d8ba;
 }
 .quote-button button:hover {
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   height: 75px;
   background-color: #ffffff;
   border: 4px solid #20d8ba;

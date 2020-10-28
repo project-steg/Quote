@@ -461,7 +461,8 @@
   place-items: center;
 }
 .how2use-btn button:hover {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   height: 75px;
   margin-top: 50px;
   background-color: #ffffff;
