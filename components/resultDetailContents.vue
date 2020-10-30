@@ -26,10 +26,13 @@ export default {
 }
 .result-detail-contents-l {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10%;
 }
 .result-detail-contents-l img {
   width: 50px;
+  height: 50px;
 }
 .result-detail-contents-c {
   width: 70%;
