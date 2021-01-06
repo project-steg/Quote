@@ -11,7 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "nuxt": "^2.0.0",
     "vue": "^2.6.12",
     "vue-scrollto": "^2.18.2",
